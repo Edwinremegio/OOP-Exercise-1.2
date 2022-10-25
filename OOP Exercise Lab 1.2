@@ -1,0 +1,88 @@
+class Bicycle{ 
+
+//Data Member
+
+	private String ownerName;
+	private String tagNo;
+	private String id;
+
+//Constructor Initialize the Date Members
+
+	public Bicycle(){
+
+		ownerName = "unknown";
+		tagNo = "unknown";
+
+	}
+	public Bicycle (String tagNo,String name) {
+	this.id =tagNo;
+	this.ownerName=name;
+	}
+	public String getOwnerName(){
+    return ownerName;
+	}
+	public void setOwnerName(String  name){
+    ownerName=name;
+    }
+	public String getTagNo(){
+    return tagNo;
+	}
+	
+	
+//Returns the name of the Bicycle's owner
+
+	public  void setTagNo(String name){
+    tagNo=name;
+	}
+	//Assign the name of the Bicycle owner
+
+	public String getId( ){
+    return id;
+	}
+	public void setId(String id_no) {
+    id=id_no;
+    }
+	}
+
+class BicycleRegistration
+{
+
+	public static void main(String[] args){
+
+		Bicycle bike_1, bike_2,bike_3,bike1,bike2,bike3;
+		String  owner1, owner2,owner3;
+
+	    bike1 = new Bicycle(); //Create and assign Value to Bike1 
+		bike1.setOwnerName("Edwin Remegio");
+
+		bike2 = new Bicycle(); //Create and assign Value to Bike2
+		bike2.setOwnerName("Elgilyn Remegio");
+		
+		bike_1 = new Bicycle(); 
+		bike_1 .setTagNo("2004-134R");
+		bike_2 = new Bicycle(); 
+		bike_2 .setTagNo("2004-134R");
+
+		//out the information
+
+		owner1 = bike1.getOwnerName();
+		owner2 = bike2.getOwnerName();	
+		
+		String tagno_1=bike_1.getTagNo( );
+		String tagno_2=bike_2.getTagNo( );
+		
+		
+		bike_3=new Bicycle("2005-20RB","Bell Jhon");
+		String tagno_3=bike_3.getId( );
+		owner3=bike_3.getOwnerName( );
+		
+		System.out.println(owner1 + " owns the Bicycle");
+		System.out.println(tagno_1 + " is the tag number");
+		System.out.println("\n" + owner2+" also owns  the Bicycle");
+		System.out.println(tagno_2 + " also owns a Bicycle");
+        System.out.println("\n"+tagno_3 + " is the tag number "+owner3);
+	}
+	}
+  
+
+  
